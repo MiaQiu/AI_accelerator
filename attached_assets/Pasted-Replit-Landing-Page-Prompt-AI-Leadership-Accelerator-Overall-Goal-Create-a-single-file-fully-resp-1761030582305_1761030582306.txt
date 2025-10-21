@@ -1,0 +1,195 @@
+Replit Landing Page Prompt: AI Leadership Accelerator
+Overall Goal: Create a single-file, fully responsive HTML landing page for Chromamind Pte. Ltd. We are selling a premium 5-day holiday program called the "AI Leadership Accelerator" for Singaporean secondary/pre-university students. The primary goal of this page is to get parents to sign up for a free introductory webinar.
+
+Tech Stack:
+
+HTML: A single index.html file.
+
+Styling: Tailwind CSS. Load it via the official CDN link in the <head>.
+
+Fonts: Use Google Fonts, specifically the "Inter" font family for all text.
+
+Design & Aesthetics:
+
+Tone: Premium, authoritative, exclusive, modern, and credible. It must appeal to ambitious Singaporean parents who value "insider" expertise.
+
+Theme: Dark Mode. This feels tech-forward and premium.
+
+Background: bg-gray-900 (#111827) or bg-black.
+
+Main Text: text-white or text-gray-100.
+
+Secondary Text: text-gray-400.
+
+Accent Color (Buttons & Highlights): A vibrant blue, like bg-blue-600 and text-blue-400.
+
+Layout: Clean, spacious, with a central content column. Must be fully responsive and look excellent on mobile.
+
+Image Assets:
+
+Founder 1 (Dr. Qiu): Screenshot 2025-10-21 at 2.53.17 PM.png
+
+Founder 2 (Mia Liu): mia.png
+
+Section-by-Section Page Breakdown:
+1. Header & Navigation Bar:
+
+Layout: A simple, sticky top navigation bar (sticky top-0 z-50 bg-gray-900 bg-opacity-90 backdrop-blur-sm border-b border-gray-700).
+
+Left Side (Logo): The company name as text: Chromamind (in bold text-white font-bold text-xl).
+
+Right Side (CTA): A single, solid blue button: [ Register for Free Webinar ] (bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700).
+
+2. Hero Section:
+
+Layout: Full-width, large text, centered.
+
+Headline (H1): Good Grades Aren't Enough Anymore. (text-5xl font-extrabold text-white tracking-tight sm:text-6xl).
+
+Sub-headline (H2): Is Your Child Future-Proof? We mentor students to lead in the age of AI. (text-2xl text-gray-300 mt-4 max-w-2xl mx-auto).
+
+Body Text: "From founders with PhDs in AI and leadership experience at global investment banks and JP Morgan, this is not another coding camp. This is an elite mentorship program to build the mindset of a future leader." (text-lg text-gray-400 mt-6).
+
+CTA Buttons:
+
+Primary (Blue): [ Register for Webinar ] (Links to the Webinar section via smooth scroll #webinar).
+
+Secondary (Outline): [ View Program Details ] (Links to the Program section #program).
+
+3. Credibility Bar:
+
+Layout: A subtle full-width section below the hero.
+
+Text: "Our founders' expertise was built at the highest levels of global finance and technology."
+
+Placeholder Logos (Greyscale): Use simple text or SVG placeholders for: "GLOBAL INVESTMENT BANKS", "JP MORGAN", "AI-POWERED PRODUCT LEADERSHIP".
+
+4. The Problem Section ("The Gap"):
+
+Headline: The Path to Success Has Changed. Are They Prepared?
+
+Layout: A 3-column grid. Each column has an icon, a heading, and text.
+
+Column 1 (AI is a Threat): Icon (e.g., a brain/chip). Heading: AI is a Commodity. Text: "AI can now write code and analyze reports. We teach your child to ask the right questions and lead AI, not be replaced by it."
+
+Column 2 (Grades vs. Skills): Icon (e.g., a portfolio/briefcase). Heading: Grades Aren't Enough. Text: "Top universities and employers (like us) want a portfolio of real projects, not just a transcript. We help them build one."
+
+Column 3 (Wrong Focus): Icon (e.g., a target). Heading: Most Programs Teach the Wrong Skills. Text: "Coding camps teach a tool. Tuition prepares for yesterday's exams. We teach the 5 irreplaceable human skills for the next 50 years."
+
+5. The Solution: The B.U.I.L.D. Framework Section:
+
+Headline: Our Solution: The B.U.I.L.D. Framework
+
+Sub-headline: "Our proprietary framework for developing the 5 skills that matter."
+
+Layout: A 5-card grid or horizontal scrolling section. Each card is a "glassmorphism" or dark bg-gray-800 rounded-lg p-6.
+
+Build (Creativity): "From idea to prototype, we teach them to create innovative solutions."
+
+Unite (Collaboration): "To lead, they must learn to communicate and collaborate with both humans and AI."
+
+Inquire (Critical Thinking): "We train them to deconstruct complex problems and find the root cause."
+
+Learn (Adaptability): "Students master new AI tools and learn to adapt in a constantly changing world."
+
+Drive (Resilience): "Through real project challenges, they learn to navigate failure, pivot, and persevere."
+
+6. The Founders/Mentors Section:
+
+Headline: Mentorship from Real-World AI & Finance Leaders
+
+Sub-headline: "We aren't career academics. We come from the world you are preparing your child for."
+
+Layout: A 2-column grid. Each column has a headshot, name, and bio.
+
+Column 1 (Dr. Qiu):
+
+Image: Use Screenshot 2025-10-21 at 2.53.17 PM.png. Apply Tailwind classes: rounded-full object-cover w-40 h-40 mx-auto border-4 border-gray-700.
+
+Name: Dr. Qiu Yihui (text-xl font-bold text-white mt-4).
+
+Bio: Machine learning Ph.D., MBA, top investment banks for 7 years. Studied/Worked in China, Singapore and Japan. (text-gray-300 mt-2).
+
+Column 2 (Mia Liu):
+
+Image: Use mia.png. Apply Tailwind classes: rounded-lg object-cover w-40 h-40 mx-auto border-4 border-gray-700. (Use rounded-lg as it's a rectangular photo).
+
+Name: Mia Liu (text-xl font-bold text-white mt-4).
+
+Bio: 10+ years data and AI product manager and team manager with JP Morgan and a premier Singaporean global investment firm. Studied/Worked in China, Singapore and France. (text-gray-300 mt-2).
+
+7. The Program Section (The Accelerator): id="program"
+
+Headline: The AI Leadership Accelerator: December Cohort
+
+Layout: A vertical timeline or 5-day step-by-step list.
+
+Day 1 (Sun): Inquire & Deconstruct: "Kick-off day. Students learn to use Critical Thinking to define a real-world problem."
+
+Day 2 (Mon): Build & Learn: "Ideation and AI Prototyping. Students learn to use AI tools to build their first solution."
+
+Day 3 (Tue): Drive & Iterate: "'The Pivot Day.' We teach Resilience by guiding them through their first major roadblock."
+
+Day 4 (Wed): Unite & Communicate: "Students build their final pitch deck and learn to tell a compelling story—a key Collaboration skill."
+
+Day 5 (Thu): Demo Day & Showcase: "Final pitches to a panel of experts. Parents are invited to this showcase session."
+
+Details Box: A highlighted bg-gray-800 rounded-lg p-6 section with key info:
+
+Dates: 30 November - 4th December, 2025
+
+For: Sec 3 - JC 2 Students
+
+Location: [Placeholder: e.g., "A modern co-working space, Central Singapore"]
+
+Investment: S$1,988 (Show this price, then show the discount).
+
+Webinar Offer: Attend our free webinar to receive an exclusive S$300 discount. (Webinar Rate: S$1,688)
+
+8. FAQ Section:
+
+Headline: Your Questions, Answered
+
+Layout: An accordion (dropdown) UI for each question.
+
+Q: Is this just another coding camp?
+
+Q: Who is this program for?
+
+Q: My child has no experience with AI. Is that okay?
+
+Q: What is the B.U.I.L.D. Framework?
+
+Q: What is the price and what's included?
+
+9. Final CTA Section (Webinar Sign-up): id="webinar"
+
+Headline: Give Your Child the "Insider's Edge"
+
+Body Text: "The future won't wait. Our 5-day Accelerator (Nov 30 - Dec 4) is limited to 20 students. Attend our free webinar to learn the 5-skill framework and secure your child's priority spot."
+
+Layout: Two large, clickable cards side-by-side (or stacked on mobile).
+
+Card 1 (Webinar Option 1):
+
+Date: Sunday, November 9th
+
+Time: 8:30 PM (SGT)
+
+Button: [ Register for Sunday ]
+
+Card 2 (Webinar Option 2):
+
+Date: Wednesday, November 12th
+
+Time: 8:30 PM (SGT)
+
+Button: [ Register for Wednesday ]
+
+Modal Form: Clicking either button should (ideally) open a simple modal pop-up with a form for Parent's Name, Email Address, and Child's School Level. If a modal is too complex, just make these mailto: links or link to a separate Google Form.
+
+10. Footer:
+
+Layout: Simple, dark footer.
+
+Content: © 2025 Chromamind Pte. Ltd. | All Rights Reserved. | Contact: [Your Email Address]
