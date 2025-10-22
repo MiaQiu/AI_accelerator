@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
-import CredibilityBar from "@/components/CredibilityBar";
 import ProblemSection from "@/components/ProblemSection";
 import BuildFramework from "@/components/BuildFramework";
 import FoundersSection from "@/components/FoundersSection";
@@ -15,7 +14,6 @@ export default function LandingPage() {
     <div className="min-h-screen bg-background">
       <Navigation />
       <HeroSection />
-      <CredibilityBar />
       <ProblemSection />
       <BuildFramework />
       <FoundersSection />
