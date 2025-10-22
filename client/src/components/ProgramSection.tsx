@@ -9,25 +9,22 @@ export default function ProgramSection() {
       subtitle: "What AI Can't Replace",
       morning: [
         "Why creativity beats memorization",
-        "Master AI and traditional research"
+        "Master AI and traditional research",
       ],
       afternoon: [
         "Get your real-world challenge",
-        "Form teams and begin research"
-      ]
+        "Form teams and begin research",
+      ],
     },
     {
       day: "Day 2",
       title: "INVESTIGATE",
       subtitle: "Think Like a Detective",
-      morning: [
-        "Ask powerful questions",
-        "Interview techniques"
-      ],
+      morning: ["Ask powerful questions", "Interview techniques"],
       afternoon: [
         "Field visit: NTUC FairPrice & restaurants",
-        "Observe real behavior, gather insights"
-      ]
+        "Observe real behavior, gather insights",
+      ],
     },
     {
       day: "Day 3",
@@ -35,39 +32,33 @@ export default function ProgramSection() {
       subtitle: "Connect the Dots",
       morning: [
         "Team collaboration challenges",
-        "Practice giving tough feedback"
+        "Practice giving tough feedback",
       ],
       afternoon: [
         "Synthesize all your research",
-        "Use '5 Whys' to find root causes"
-      ]
+        "Use '5 Whys' to find root causes",
+      ],
     },
     {
       day: "Day 4",
       title: "CREATE",
       subtitle: "From Problem to Possibility",
-      morning: [
-        "Reframe problems creatively",
-        "Brainstorm 15+ solutions"
-      ],
+      morning: ["Reframe problems creatively", "Brainstorm 15+ solutions"],
       afternoon: [
         "Build a tangible prototype",
-        "Refine based on peer feedback"
-      ]
+        "Refine based on peer feedback",
+      ],
     },
     {
       day: "Day 5",
       title: "PITCH",
       subtitle: "Finish Strong",
-      morning: [
-        "Master storytelling & presentation",
-        "Handle tough questions"
-      ],
+      morning: ["Master storytelling & presentation", "Handle tough questions"],
       afternoon: [
         "7-minute pitch to judges & parents",
-        "Compete for awards & celebrate"
-      ]
-    }
+        "Compete for awards & celebrate",
+      ],
+    },
   ];
 
   return (
@@ -110,11 +101,9 @@ export default function ProgramSection() {
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                 <div>
-                  <div className="font-semibold text-foreground">
-                    Location
-                  </div>
+                  <div className="font-semibold text-foreground">Location</div>
                   <div className="text-muted-foreground">
-                    A modern co-working space, Central Singapore
+                    WeWork, level 17 Community Floor, Suntec Tower 5, Singapore
                   </div>
                 </div>
               </div>
@@ -135,8 +124,7 @@ export default function ProgramSection() {
                 Webinar Exclusive Offer
               </div>
               <div className="text-muted-foreground mb-2">
-                Attend our free webinar to receive an exclusive S$300
-                discount.
+                Attend our free webinar to receive an exclusive S$300 discount.
               </div>
               <div className="text-2xl font-bold text-primary">
                 Webinar Rate: S$999
@@ -181,10 +169,15 @@ export default function ProgramSection() {
                 </div>
                 <div className="space-y-3">
                   <div>
-                    <div className="text-xs font-semibold text-foreground mb-1.5">Morning</div>
+                    <div className="text-xs font-semibold text-foreground mb-1.5">
+                      Morning
+                    </div>
                     <ul className="space-y-1">
                       {day.morning.map((activity, actIndex) => (
-                        <li key={actIndex} className="text-sm text-muted-foreground flex items-start">
+                        <li
+                          key={actIndex}
+                          className="text-sm text-muted-foreground flex items-start"
+                        >
                           <span className="text-primary mr-2 mt-0.5">•</span>
                           <span>{activity}</span>
                         </li>
@@ -192,10 +185,15 @@ export default function ProgramSection() {
                     </ul>
                   </div>
                   <div>
-                    <div className="text-xs font-semibold text-foreground mb-1.5">Afternoon</div>
+                    <div className="text-xs font-semibold text-foreground mb-1.5">
+                      Afternoon
+                    </div>
                     <ul className="space-y-1">
                       {day.afternoon.map((activity, actIndex) => (
-                        <li key={actIndex} className="text-sm text-muted-foreground flex items-start">
+                        <li
+                          key={actIndex}
+                          className="text-sm text-muted-foreground flex items-start"
+                        >
                           <span className="text-primary mr-2 mt-0.5">•</span>
                           <span>{activity}</span>
                         </li>

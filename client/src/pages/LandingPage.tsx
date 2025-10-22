@@ -4,6 +4,7 @@ import CredibilityBar from "@/components/CredibilityBar";
 import ProblemSection from "@/components/ProblemSection";
 import BuildFramework from "@/components/BuildFramework";
 import FoundersSection from "@/components/FoundersSection";
+import PanelistsSection from "@/components/PanelistsSection";
 import ProgramSection from "@/components/ProgramSection";
 import FAQSection from "@/components/FAQSection";
 import WebinarCTA from "@/components/WebinarCTA";
@@ -18,6 +19,7 @@ export default function LandingPage() {
       <ProblemSection />
       <BuildFramework />
       <FoundersSection />
+      <PanelistsSection />
       <ProgramSection />
       <FAQSection />
       <WebinarCTA />
