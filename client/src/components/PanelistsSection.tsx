@@ -4,20 +4,27 @@ import { Award } from "lucide-react";
 export default function PanelistsSection() {
   const panelists = [
     {
-      role: "UX Designer",
-      organization: "Lorong AI",
-      description: "Singapore's gov-backed AI community",
-    },
-    {
-      role: "Program Manager",
-      organization: "NUS Block71",
-      description: "Singapore's premier startup accelerator",
-    },
-    {
+      name: "Jake Pratley",
       role: "Director & Faculty",
       organization: "GLOBIS University Asia Pacific",
       description: "Japan's #1 MBA program",
+      image: "/jack_pratley.jpg",
     },
+    {
+      name: "John Smith",
+      role: "Program Manager",
+      organization: "NUS Block71",
+      description: "Singapore's premier startup accelerator",
+      image: "/placeholder-panelist-2.jpg",
+    },
+    {
+      name: "Mehul Shah",
+      role: "UX Designer & Program manager",
+      organization: "GovTech & Lorong AI",
+      description: "Singapore's gov-backed AI community",
+      image: "/mehul-shah.jpg",
+    },
+  
   ];
 
   return (
@@ -47,15 +54,36 @@ export default function PanelistsSection() {
               data-testid={`card-panelist-${index}`}
             >
               <div className="mb-4">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-primary" />
+                <div className="w-32 h-32 rounded-full bg-muted/50 flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                  <img
+                    src={panelist.image}
+                    alt={panelist.name}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const parent = target.parentElement;
+                      if (parent) {
+                        const icon = document.createElement('div');
+                        icon.className = 'flex items-center justify-center w-full h-full';
+                        icon.innerHTML = '<svg class="w-16 h-16 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>';
+                        parent.appendChild(icon);
+                      }
+                    }}
+                  />
                 </div>
                 <h3
-                  className="text-lg font-bold text-foreground mb-2"
+                  className="text-xl font-bold text-foreground mb-1"
+                  data-testid={`text-panelist-name-${index}`}
+                >
+                  {panelist.name}
+                </h3>
+                <h4
+                  className="text-base font-semibold text-muted-foreground mb-2"
                   data-testid={`text-panelist-role-${index}`}
                 >
                   {panelist.role}
-                </h3>
+                </h4>
                 <div className="text-base font-semibold text-primary mb-1">
                   {panelist.organization}
                 </div>

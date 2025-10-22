@@ -138,7 +138,7 @@ export default function ProgramSection() {
             5-Day Journey
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {timeline.map((day, index) => (
+            {timeline.slice(0, 3).map((day, index) => (
               <Card
                 key={index}
                 className="p-6"
@@ -159,6 +159,73 @@ export default function ProgramSection() {
                     <h4
                       className="text-lg font-bold text-foreground"
                       data-testid={`text-day-title-${index}`}
+                    >
+                      {day.title}
+                    </h4>
+                    <p className="text-sm text-primary/80 font-medium">
+                      "{day.subtitle}"
+                    </p>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div>
+                    <div className="text-xs font-semibold text-foreground mb-1.5">
+                      Morning
+                    </div>
+                    <ul className="space-y-1">
+                      {day.morning.map((activity, actIndex) => (
+                        <li
+                          key={actIndex}
+                          className="text-sm text-muted-foreground flex items-start"
+                        >
+                          <span className="text-primary mr-2 mt-0.5">•</span>
+                          <span>{activity}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <div className="text-xs font-semibold text-foreground mb-1.5">
+                      Afternoon
+                    </div>
+                    <ul className="space-y-1">
+                      {day.afternoon.map((activity, actIndex) => (
+                        <li
+                          key={actIndex}
+                          className="text-sm text-muted-foreground flex items-start"
+                        >
+                          <span className="text-primary mr-2 mt-0.5">•</span>
+                          <span>{activity}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 md:max-w-3xl md:mx-auto">
+            {timeline.slice(3).map((day, index) => (
+              <Card
+                key={index + 3}
+                className="p-6"
+                data-testid={`timeline-item-${index + 3}`}
+              >
+                <div className="flex items-start gap-3 mb-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                      <span className="text-primary font-bold">
+                        {index + 4}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="text-sm text-muted-foreground mb-1">
+                      {day.day}
+                    </div>
+                    <h4
+                      className="text-lg font-bold text-foreground"
+                      data-testid={`text-day-title-${index + 3}`}
                     >
                       {day.title}
                     </h4>
