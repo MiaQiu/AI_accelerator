@@ -7,7 +7,13 @@ export default function FoundersSection() {
       image: drQiuImage,
       name: "Dr. Qiu Yihui",
       title: "Machine Learning PhD (NTU) | Ex-Credit Suisse & Sumitomo Mitsui Banking Corporation",
-      bio: "7 years leading AI and digital transformation at Credit Suisse and Sumitomo Mitsui Banking Corporation across China, Singapore, and Japan. PhD in Machine Learning from NTU with MBA specialization. Published in top-tier ML conferences (ICLR, ICPR) and journals (Neurocomputing). Drove enterprise-wide AI adoption strategies at global investment banks, translating cutting-edge research into measurable business solutions. Bridged the gap between technical teams and C-suite executives—the exact skill of making complex ideas actionable that today's employers demand.",
+      bioPoints: [
+        "7 years leading AI and digital transformation at Credit Suisse and Sumitomo Mitsui Banking Corporation",
+        "PhD in Machine Learning from NTU with MBA specialization",
+        "Published in top-tier ML conferences (ICLR, ICPR) and journals (Neurocomputing)",
+        "Drove enterprise-wide AI adoption strategies, translating cutting-edge research into business solutions",
+        "Bridged the gap between technical teams and C-suite executives"
+      ],
       quote: "I've interviewed hundreds of graduates for analyst and associate roles. The ones who succeed aren't always the straight-A students—they're the ones who can think critically, adapt quickly, and communicate ideas clearly under pressure.",
       isCircular: true
     },
@@ -15,7 +21,13 @@ export default function FoundersSection() {
       image: miaLiuImage,
       name: "Mia Liu",
       title: "Head of AI Products | Ex-Temasek, Ex-Credit Suisse, Ex-JP Morgan & BNP Paribas",
-      bio: "10+ years leading AI/GenAI product strategy and cross-functional teams at Temasek, Credit Suisse, and JP Morgan. Previously headed Business Intelligence for Corporate & Investment Banking at BNP Paribas. Built and scaled AI-driven data platforms across Singapore, China, and France, serving global financial institutions. Specialized in translating complex technology into business impact—the exact skill that separates high performers from average graduates in competitive job markets.",
+      bioPoints: [
+        "10+ years leading AI/GenAI product strategy and cross-functional teams",
+        "Previously headed Business Intelligence for Corporate & Investment Banking at BNP Paribas",
+        "Built and scaled AI-driven data platforms across Singapore, China, and France",
+        "Served global financial institutions including Temasek, Credit Suisse, and JP Morgan",
+        "Specialized in translating complex technology into business impact"
+      ],
       quote: "In interviews, I can tell within 5 minutes if a candidate has real-world problem-solving skills or just memorized textbook answers. This program teaches the former.",
       isCircular: false
     }
@@ -45,9 +57,14 @@ export default function FoundersSection() {
               <p className="text-sm text-primary/80 font-medium mt-2">
                 {founder.title}
               </p>
-              <p className="text-sm text-muted-foreground mt-3 text-left" data-testid={`text-founder-bio-${index}`}>
-                {founder.bio}
-              </p>
+              <ul className="mt-3 space-y-2 text-left" data-testid={`text-founder-bio-${index}`}>
+                {founder.bioPoints.map((point, pointIndex) => (
+                  <li key={pointIndex} className="text-sm text-muted-foreground flex items-start">
+                    <span className="text-primary mr-2 mt-0.5">•</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
               <div className="mt-4 p-4 bg-muted/30 rounded-lg border-l-4 border-primary">
                 <p className="text-sm text-foreground italic text-left">
                   "{founder.quote}"
