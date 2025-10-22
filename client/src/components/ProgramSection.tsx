@@ -141,7 +141,7 @@ export default function ProgramSection() {
             {timeline.map((day, index) => (
               <Card
                 key={index}
-                className="p-6"
+                className="p-5"
                 data-testid={`timeline-item-${index}`}
               >
                 <div className="flex items-start gap-3 mb-4">
