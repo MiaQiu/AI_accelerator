@@ -6,18 +6,18 @@ export default function PanelistsSection() {
     {
       role: "UX Designer",
       organization: "Lorong AI",
-      description: "Singapore's gov-backed AI community"
+      description: "Singapore's gov-backed AI community",
     },
     {
       role: "Program Manager",
       organization: "NUS Block71",
-      description: "Singapore's premier startup accelerator"
+      description: "Singapore's premier startup accelerator",
     },
     {
-      role: "Critical Thinking Faculty",
-      organization: "GLOBIS University",
-      description: "Japan's #1 MBA program"
-    }
+      role: "Director & Faculty",
+      organization: "GLOBIS University Asia Pacific",
+      description: "Japan's #1 MBA program",
+    },
   ];
 
   return (
@@ -36,7 +36,8 @@ export default function PanelistsSection() {
           className="text-xl text-center text-muted-foreground mb-12 max-w-3xl mx-auto"
           data-testid="text-panelists-subheadline"
         >
-          Your child will present their solutions to expert judges from Singapore's top AI, startup, and education ecosystems
+          Your child will present their solutions to expert judges from
+          Singapore's top AI, startup, and education ecosystems
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {panelists.map((panelist, index) => (
