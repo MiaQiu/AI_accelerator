@@ -6,16 +6,16 @@ export default function FoundersSection() {
     {
       image: drQiuImage,
       name: "Dr. Qiu Yihui",
-      title: "Machine Learning PhD | Ex-Investment Banking Digital Transformation Leader (7 years)",
-      bio: "Led digital transformation initiatives at global investment banks across China, Singapore, and Japan. PhD in Machine Learning with MBA specialization. Drove enterprise-wide AI adoption strategies, translating cutting-edge technology into business solutions. Bridged the gap between technical teams and C-suite executives—the exact skill of making complex ideas actionable that today's employers demand.",
-      quote: "I've interviewed hundreds of graduates. The ones who succeed aren't always the straight-A students—they're the ones who can think critically, adapt quickly, and communicate ideas clearly.",
+      title: "Machine Learning PhD (NTU) | Ex-Credit Suisse & Sumitomo Mitsui Banking Corporation",
+      bio: "7 years leading AI and digital transformation at Credit Suisse and Sumitomo Mitsui Banking Corporation across China, Singapore, and Japan. PhD in Machine Learning from NTU with MBA specialization. Published in top-tier ML conferences (ICLR, ICPR) and journals (Neurocomputing). Drove enterprise-wide AI adoption strategies at global investment banks, translating cutting-edge research into measurable business solutions. Bridged the gap between technical teams and C-suite executives—the exact skill of making complex ideas actionable that today's employers demand.",
+      quote: "I've interviewed hundreds of graduates for analyst and associate roles. The ones who succeed aren't always the straight-A students—they're the ones who can think critically, adapt quickly, and communicate ideas clearly under pressure.",
       isCircular: true
     },
     {
       image: miaLiuImage,
       name: "Mia Liu",
-      title: "Lead Product Manager, AI & Data | Ex-BNP Paribas Head of Business Intelligence",
-      bio: "Led AI and GenAI product initiatives at premier Singaporean investment firms for 5 years. Previously headed Business Intelligence for Corporate & Investment Banking at BNP Paribas. Decade of experience building data platforms and leading cross-functional teams across Singapore, China, and France. Specialized in translating complex technology into business impact—the exact skill that separates high performers from average graduates.",
+      title: "Head of AI Products | Ex-Temasek, Ex-Credit Suisse, Ex-JP Morgan & BNP Paribas",
+      bio: "10+ years leading AI/GenAI product strategy and cross-functional teams at Temasek, Credit Suisse, and JP Morgan. Previously headed Business Intelligence for Corporate & Investment Banking at BNP Paribas. Built and scaled AI-driven data platforms across Singapore, China, and France, serving global financial institutions. Specialized in translating complex technology into business impact—the exact skill that separates high performers from average graduates in competitive job markets.",
       quote: "In interviews, I can tell within 5 minutes if a candidate has real-world problem-solving skills or just memorized textbook answers. This program teaches the former.",
       isCircular: false
     }
