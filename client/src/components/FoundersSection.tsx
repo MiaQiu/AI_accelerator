@@ -7,16 +7,13 @@ export default function FoundersSection() {
       image: drQiuImage,
       name: "Dr. Qiu Yihui",
       title:
-        "AI PhD (NTU) | Ex-Credit Suisse & Sumitomo Mitsui Banking Corporation",
+        "AI PhD | MBA | Ex-Credit Suisse & Sumitomo Mitsui Banking Corporation",
       bioPoints: [
-        "7 years leading AI and digital transformation at Credit Suisse and Sumitomo Mitsui Banking Corporation",
-        "PhD in Machine Learning from NTU with MBA specialization",
-        "Published in top-tier ML conferences (ICLR, ICPR) and journals (Neurocomputing)",
-        "Drove enterprise-wide AI adoption strategies, translating cutting-edge research into business solutions",
-        "Bridged the gap between technical teams and C-suite executives",
+        "7 years leading AI and digital transformation at Credit Suisse and Sumitomo Mitsui Banking Corporation. Drove enterprise-wide AI adoption strategies, translating cutting-edge research into business solutions. ",
+        "PhD in AI from NTU, Published in top-tier ML conferences (ICLR, ICPR) and journals (Neurocomputing)",
       ],
       quote:
-        "I've interviewed hundreds of graduates for analyst and associate roles. The ones who succeed aren't always the straight-A students—they're the ones who can think critically, adapt quickly, and communicate ideas clearly under pressure.",
+        "In interviews, I can tell within 5 minutes if a candidate has real-world problem-solving skills or just memorized textbook answers. This program teaches the former.",
       isCircular: true,
     },
     {
@@ -25,14 +22,11 @@ export default function FoundersSection() {
       title:
         "Head of AI Products | Ex-Temasek, Ex-Credit Suisse, Ex-JP Morgan & BNP Paribas",
       bioPoints: [
-        "10+ years leading AI/GenAI product strategy and cross-functional teams",
-        "Previously headed Business Intelligence for Corporate & Investment Banking at BNP Paribas",
-        "Built and scaled AI-driven data platforms across Singapore, China, and France",
-        "Served global financial institutions including Temasek, Credit Suisse, and JP Morgan",
-        "Specialized in translating complex technology into business impact",
+        "10+ years leading AI/GenAI product strategy and cross-functional teams. Built and scaled AI-driven data platforms across Singapore, China, and France",
+        "Previously headed Business Intelligence for Corporate & Investment Banking at BNP Paribas. Specialized in translating complex technology into business impact",
       ],
       quote:
-        "In interviews, I can tell within 5 minutes if a candidate has real-world problem-solving skills or just memorized textbook answers. This program teaches the former.",
+        "I've interviewed hundreds of graduates for analyst and associate roles. The ones who succeed aren't always the straight-A students. They're the ones who can think critically, adapt quickly, and communicate ideas clearly under pressure.",
       isCircular: false,
     },
   ];
