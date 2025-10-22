@@ -7,9 +7,11 @@ export default function ProgramSection() {
       day: "Day 1",
       title: "DISCOVER",
       subtitle: "What AI Can't Replace",
-      activities: [
+      morning: [
         "Why creativity beats memorization",
-        "Master AI and traditional research",
+        "Master AI and traditional research"
+      ],
+      afternoon: [
         "Get your real-world challenge",
         "Form teams and begin research"
       ]
@@ -18,9 +20,11 @@ export default function ProgramSection() {
       day: "Day 2",
       title: "INVESTIGATE",
       subtitle: "Think Like a Detective",
-      activities: [
+      morning: [
         "Ask powerful questions",
-        "Interview techniques",
+        "Interview techniques"
+      ],
+      afternoon: [
         "Field visit: NTUC FairPrice & restaurants",
         "Observe real behavior, gather insights"
       ]
@@ -29,9 +33,11 @@ export default function ProgramSection() {
       day: "Day 3",
       title: "ANALYZE",
       subtitle: "Connect the Dots",
-      activities: [
+      morning: [
         "Team collaboration challenges",
-        "Practice giving tough feedback",
+        "Practice giving tough feedback"
+      ],
+      afternoon: [
         "Synthesize all your research",
         "Use '5 Whys' to find root causes"
       ]
@@ -40,9 +46,11 @@ export default function ProgramSection() {
       day: "Day 4",
       title: "CREATE",
       subtitle: "From Problem to Possibility",
-      activities: [
+      morning: [
         "Reframe problems creatively",
-        "Brainstorm 15+ solutions",
+        "Brainstorm 15+ solutions"
+      ],
+      afternoon: [
         "Build a tangible prototype",
         "Refine based on peer feedback"
       ]
@@ -51,9 +59,11 @@ export default function ProgramSection() {
       day: "Day 5",
       title: "PITCH",
       subtitle: "Finish Strong",
-      activities: [
+      morning: [
         "Master storytelling & presentation",
-        "Handle tough questions",
+        "Handle tough questions"
+      ],
+      afternoon: [
         "7-minute pitch to judges & parents",
         "Compete for awards & celebrate"
       ]
@@ -99,14 +109,30 @@ export default function ProgramSection() {
                     <p className="text-sm text-primary/80 font-medium mb-3">
                       "{day.subtitle}"
                     </p>
-                    <ul className="space-y-1.5">
-                      {day.activities.map((activity, actIndex) => (
-                        <li key={actIndex} className="text-sm text-muted-foreground flex items-start">
-                          <span className="text-primary mr-2 mt-0.5">•</span>
-                          <span>{activity}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="space-y-3">
+                      <div>
+                        <div className="text-xs font-semibold text-foreground mb-1.5">Morning</div>
+                        <ul className="space-y-1">
+                          {day.morning.map((activity, actIndex) => (
+                            <li key={actIndex} className="text-sm text-muted-foreground flex items-start">
+                              <span className="text-primary mr-2 mt-0.5">•</span>
+                              <span>{activity}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <div className="text-xs font-semibold text-foreground mb-1.5">Afternoon</div>
+                        <ul className="space-y-1">
+                          {day.afternoon.map((activity, actIndex) => (
+                            <li key={actIndex} className="text-sm text-muted-foreground flex items-start">
+                              <span className="text-primary mr-2 mt-0.5">•</span>
+                              <span>{activity}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
