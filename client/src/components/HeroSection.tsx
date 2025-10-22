@@ -58,7 +58,7 @@ export default function HeroSection() {
           </div>
 
           <div className="relative rounded-lg overflow-hidden h-[400px] lg:h-[500px]">
-            <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/5 to-transparent z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/5 to-transparent z-10"></div>
             <img
               src={heroImage}
               alt="AI Leadership Team Strategy Session"
