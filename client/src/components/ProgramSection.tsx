@@ -7,36 +7,56 @@ export default function ProgramSection() {
       day: "Day 1",
       title: "DISCOVER",
       subtitle: "What AI Can't Replace",
-      morning: "Learn why creativity beats memorization, master AI and traditional research methods, and unlock your creative problem-solving potential.",
-      afternoon: "Receive your real-world challenge (e.g., Singapore's food waste crisis), form teams, and conduct multi-source research to map what you know vs. what you need to discover."
+      activities: [
+        "Why creativity beats memorization",
+        "Master AI and traditional research",
+        "Get your real-world challenge",
+        "Form teams and begin research"
+      ]
     },
     {
       day: "Day 2",
       title: "INVESTIGATE",
       subtitle: "Think Like a Detective",
-      morning: "Master the art of asking powerful questions, practice interview techniques, and learn to spot hidden patterns and biases in data.",
-      afternoon: "Visit NTUC FairPrice and local restaurants to observe real behavior, interview stakeholders, and discover insights you'd never find online."
+      activities: [
+        "Ask powerful questions",
+        "Interview techniques",
+        "Field visit: NTUC FairPrice & restaurants",
+        "Observe real behavior, gather insights"
+      ]
     },
     {
       day: "Day 3",
       title: "ANALYZE",
       subtitle: "Connect the Dots",
-      morning: "Experience why teams beat individuals through hands-on challenges, master giving tough feedback, and learn to communicate complex ideas with clarity.",
-      afternoon: "Synthesize all your research (AI, interviews, field observations), use the \"5 Whys\" to find root causes, and craft a laser-focused problem statement."
+      activities: [
+        "Team collaboration challenges",
+        "Practice giving tough feedback",
+        "Synthesize all your research",
+        "Use '5 Whys' to find root causes"
+      ]
     },
     {
       day: "Day 4",
       title: "CREATE",
       subtitle: "From Problem to Possibility",
-      morning: "Reframe problems to unlock new solutions, generate wild ideas using proven innovation techniques, and learn why \"done beats perfect.\"",
-      afternoon: "Brainstorm 15+ solutions, select your best idea, build a tangible prototype, and refine it based on peer feedback."
+      activities: [
+        "Reframe problems creatively",
+        "Brainstorm 15+ solutions",
+        "Build a tangible prototype",
+        "Refine based on peer feedback"
+      ]
     },
     {
       day: "Day 5",
       title: "PITCH",
       subtitle: "Finish Strong",
-      morning: "Learn how resilience fuels success, master storytelling and presentation skills, and practice handling tough questions with confidence.",
-      afternoon: "Deliver your 7-minute pitch to judges and parents, compete for awards (Most Innovative, Best Research, Audience Favorite), and celebrate your transformation."
+      activities: [
+        "Master storytelling & presentation",
+        "Handle tough questions",
+        "7-minute pitch to judges & parents",
+        "Compete for awards & celebrate"
+      ]
     }
   ];
 
@@ -66,7 +86,7 @@ export default function ProgramSection() {
                       </span>
                     </div>
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <div className="text-sm text-muted-foreground mb-1">
                       {day.day}
                     </div>
@@ -79,16 +99,14 @@ export default function ProgramSection() {
                     <p className="text-sm text-primary/80 font-medium mb-3">
                       "{day.subtitle}"
                     </p>
-                    <div className="space-y-2">
-                      <div>
-                        <span className="text-sm font-semibold text-foreground">Morning: </span>
-                        <span className="text-sm text-muted-foreground">{day.morning}</span>
-                      </div>
-                      <div>
-                        <span className="text-sm font-semibold text-foreground">Afternoon: </span>
-                        <span className="text-sm text-muted-foreground">{day.afternoon}</span>
-                      </div>
-                    </div>
+                    <ul className="space-y-1.5">
+                      {day.activities.map((activity, actIndex) => (
+                        <li key={actIndex} className="text-sm text-muted-foreground flex items-start">
+                          <span className="text-primary mr-2 mt-0.5">•</span>
+                          <span>{activity}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               ))}
