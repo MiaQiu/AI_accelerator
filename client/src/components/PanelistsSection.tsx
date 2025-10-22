@@ -12,14 +12,14 @@ export default function PanelistsSection() {
     },
     {
       name: "John Smith",
-      role: "Program Manager",
-      organization: "NUS Block71",
-      description: "Singapore's premier startup accelerator",
+      role: "Program Director",
+      organization: "NUS Block71 Incubator",
+      description: "Singapore's premier startup ecosystem builder and global connector",
       image: "/placeholder-panelist-2.jpg",
     },
     {
       name: "Mehul Shah",
-      role: "UX Designer & Program manager",
+      role: "Product Marketing & Communication",
       organization: "GovTech & Lorong AI",
       description: "Singapore's gov-backed AI community",
       image: "/mehul-shah.jpg",
