@@ -8,6 +8,7 @@ export default function FoundersSection() {
       name: "Dr. Qiu Yihui",
       title:
         "AI PhD | MBA | Ex-Credit Suisse & Sumitomo Mitsui Banking Corporation",
+      companies: ["Credit Suisse", "Sumitomo Mitsui", "NTU"],
       bioPoints: [
         "7 years leading AI and digital transformation at Credit Suisse and Sumitomo Mitsui Banking Corporation. Drove enterprise-wide AI adoption strategies, translating cutting-edge research into business solutions. ",
         "PhD in AI from NTU, Published in top-tier ML conferences (ICLR, ICPR) and journals (Neurocomputing)",
@@ -21,6 +22,7 @@ export default function FoundersSection() {
       name: "Mia Liu",
       title:
         "Head of AI Products | Ex-Temasek, Ex-Credit Suisse, Ex-JP Morgan & BNP Paribas",
+      companies: ["Temasek", "Credit Suisse", "JP Morgan", "BNP Paribas"],
       bioPoints: [
         "10+ years leading AI/GenAI product strategy and cross-functional teams. Built and scaled AI-driven data platforms across Singapore, China, and France",
         "Previously headed Business Intelligence for Corporate & Investment Banking at BNP Paribas. Specialized in translating complex technology into business impact",
@@ -69,6 +71,16 @@ export default function FoundersSection() {
               <p className="text-sm text-primary/80 font-medium mt-2">
                 {founder.title}
               </p>
+              {/* <div className="flex flex-wrap items-center justify-center gap-3 mt-3 mb-2">
+                {founder.companies.map((company, companyIndex) => (
+                  <div
+                    key={companyIndex}
+                    className="px-3 py-1.5 bg-muted/50 border border-muted-foreground/20 rounded-md text-xs font-semibold text-foreground"
+                  >
+                    {company}
+                  </div>
+                ))}
+              </div> */}
               <ul
                 className="mt-3 space-y-2 text-left"
                 data-testid={`text-founder-bio-${index}`}
