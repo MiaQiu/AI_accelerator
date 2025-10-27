@@ -2,10 +2,7 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ProblemSection from "@/components/ProblemSection";
 import BuildFramework from "@/components/BuildFramework";
-import FoundersSection from "@/components/FoundersSection";
-import PanelistsSection from "@/components/PanelistsSection";
-import ProgramSection from "@/components/ProgramSection";
-import FAQSection from "@/components/FAQSection";
+import FoundersBrief from "@/components/FoundersBrief";
 import WebinarCTA from "@/components/WebinarCTA";
 import Footer from "@/components/Footer";
 
@@ -16,10 +13,7 @@ export default function LandingPage() {
       <HeroSection />
       <ProblemSection />
       <BuildFramework />
-      <FoundersSection />
-      <PanelistsSection />
-      <ProgramSection />
-      <FAQSection />
+      <FoundersBrief />
       <WebinarCTA />
       <Footer />
     </div>

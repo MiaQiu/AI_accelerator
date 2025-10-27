@@ -1,5 +1,7 @@
 import { Lightbulb, Users, Search, Zap, TrendingUp } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 export default function BuildFramework() {
   const skillColors = {
@@ -62,7 +64,7 @@ export default function BuildFramework() {
         <p className="text-xl text-center text-muted-foreground mb-12" data-testid="text-build-subheadline">
           Our proprietary framework for developing the 5 skills that matter.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-8">
           {skills.map((skill, index) => {
             const Icon = skill.icon;
             return (
@@ -90,6 +92,13 @@ export default function BuildFramework() {
               </Card>
             );
           })}
+        </div>
+        <div className="text-center">
+          <Link href="/program">
+            <Button size="lg" variant="outline">
+              View Program Details
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

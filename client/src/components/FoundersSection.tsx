@@ -14,8 +14,7 @@ export default function FoundersSection() {
         "PhD in AI from NTU, Published in top-tier ML conferences (ICLR, ICPR) and journals (Neurocomputing)",
       ],
       quote:
-        "In interviews, I can tell within 5 minutes if a candidate has real-world problem-solving skills or just memorized textbook answers. This program teaches the former.",
-      isCircular: true,
+        "In the AI age, what sets you apart isn't just what you know. It's the ability to learn any new domain quickly and apply that knowledge to solve real-world problems.",
     },
     {
       image: miaLiuImage,

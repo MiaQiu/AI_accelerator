@@ -1,13 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 import heroImage from "@assets/team-strategy-session-stockcake_1761031746138.jpg";
 
 export default function HeroSection() {
   const scrollToWebinar = () => {
     document.getElementById("webinar")?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToProgram = () => {
-    document.getElementById("program")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -32,27 +29,33 @@ export default function HeroSection() {
               className="text-lg text-muted-foreground mt-6"
               data-testid="text-hero-body"
             >
-              From founders with PhDs in AI and leadership experience at global
+              {/* From founders with PhDs in AI and leadership experience at global
               investment banks and JP Morgan, this is not another coding camp.
               This is an elite mentorship program to build the mindset of a
-              future leader.
+              future leader. */}
+              Forget boring lectures. In 5 days, students will tackle real-world challenges, 
+              advised by mentors with PhDs in AI and leadership experience from global firms and business schools.
+              
+              We don't teach students what to remember. We teach them how to think—like an innovator, a CEO, and a problem-solver.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button
-                size="lg"
-                onClick={scrollToWebinar}
-                data-testid="button-hero-register"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              >
-                Register for Webinar
-              </Button>
+              <Link href="/program">
+                <Button
+                  size="lg"
+                  data-testid="button-hero-details"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto"
+                >
+                  Explore the 5-Day Sprint
+                </Button>
+              </Link>
+
               <Button
                 size="lg"
                 variant="outline"
-                onClick={scrollToProgram}
-                data-testid="button-hero-details"
+                onClick={scrollToWebinar}
+                data-testid="button-hero-register"
               >
-                View Program Details
+                Register for Webinar
               </Button>
             </div>
           </div>

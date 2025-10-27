@@ -96,7 +96,7 @@ export default function ProgramSection() {
           className="text-4xl font-bold text-center text-foreground mb-12"
           data-testid="text-program-headline"
         >
-          The AI Leadership Accelerator: The Founding Cohort
+          The 5-Day Innovation Sprint: The Founding Cohort
         </h2>
 
         <div className="max-w-4xl mx-auto mb-16">
@@ -202,7 +202,7 @@ export default function ProgramSection() {
               </h4>
               <p className="text-muted-foreground mb-4 text-center">
                 Good grades are no longer enough. But what's the alternative? Join our 45-min masterclass, <span className="font-semibold italic">"Future-Proofing Your Child,"</span> hosted by our PhD founders. You'll learn the 3 skills AI leaders look for, and we'll answer all your questions live.
-              </p>
+              </p>x
               <div className="flex flex-col items-center gap-3">
                 <div className="text-2xl font-bold text-primary">
                   Masterclass Rate: S$1,299
