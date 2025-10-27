@@ -31,18 +31,22 @@ export default function ProgramHero() {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button
-            size="lg"
-            onClick={scrollToWebinar}
-            className="bg-primary hover:bg-primary/90 text-lg px-8 py-6"
-          >
-            Register for Free Masterclass
-          </Button>
-          <div className="text-center">
-            <div className="text-sm text-muted-foreground line-through">S$1,599</div>
-            <div className="text-2xl font-bold text-primary">S$1,299</div>
-            <div className="text-xs text-muted-foreground">Masterclass Rate</div>
+        <div className="max-w-2xl mx-auto mb-8">
+          <div className="p-6 bg-background/80 backdrop-blur-sm rounded-xl border-2 border-primary/20">
+            <div className="text-center mb-4">
+              <div className="text-sm text-muted-foreground line-through">S$1,599</div>
+              <div className="text-4xl font-bold text-primary">S$1,299</div>
+            </div>
+            <p className="text-base text-muted-foreground leading-relaxed mb-4">
+              See why our 5-Day, $1,299 Sprint delivers more value than any other program. Join our free masterclass to meet the PhD mentors and ask your questions directly.
+            </p>
+            <Button
+              size="lg"
+              onClick={scrollToWebinar}
+              className="bg-primary hover:bg-primary/90 w-full text-lg py-6"
+            >
+              Meet Our Mentors — Free Webinar
+            </Button>
           </div>
         </div>
       </div>

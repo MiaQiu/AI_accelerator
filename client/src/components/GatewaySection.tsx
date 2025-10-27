@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { CheckCircle, Rocket, Award, Users } from "lucide-react";
+import { Rocket, Award, Users, Presentation, HeartHandshake, Code } from "lucide-react";
 
 export default function GatewaySection() {
   return (
@@ -9,7 +9,7 @@ export default function GatewaySection() {
           The Sprint is Just the Beginning.
         </h2>
 
-        <div className="space-y-8">
+        <div className="space-y-12">
           <Card className="p-8 bg-background/50 backdrop-blur-sm">
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               We believe in long-term mentorship, not short-term camps. The 5-Day Sprint is <span className="font-semibold text-foreground">Phase 1</span>: an intense, high-energy launchpad.
@@ -19,105 +19,122 @@ export default function GatewaySection() {
             </p>
           </Card>
 
-          <div className="text-center py-8">
-            <div className="inline-block p-4 bg-primary/10 rounded-full mb-4">
-              <Rocket className="w-12 h-12 text-primary" />
-            </div>
-            <h3 className="text-3xl font-bold text-foreground mb-4">
-              Introducing the ChromaMind Leadership Accelerator
-            </h3>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Students with the most promising projects from the sprint will be invited to join our exclusive <span className="font-semibold text-foreground">6-Month Leadership Accelerator</span>.
-            </p>
-          </div>
+          {/* 2-Column Mini-Hero Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-gradient-to-br from-primary/10 via-primary/5 to-background rounded-2xl p-8 lg:p-12 border-2 border-primary/20">
+            {/* Left Side - The "What" */}
+            <div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 rounded-full mb-4">
+                <Rocket className="w-5 h-5 text-primary" />
+                <span className="text-sm font-bold text-primary">INVITATION-ONLY</span>
+              </div>
 
-          <Card className="p-8 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              This is not another class. It's a real-world mentorship program designed to do one thing: <span className="font-semibold text-foreground">build a world-class Capstone Project that makes your child stand out</span>.
-            </p>
+              <h3 className="text-4xl font-bold text-foreground mb-4">
+                Introducing The ChromaMind Leadership Accelerator
+              </h3>
 
-            <div className="mb-6">
-              <p className="text-base text-muted-foreground leading-relaxed mb-4">
-                Guided bi-weekly by our PhD and industry mentors (from firms like JP Morgan), students in the Accelerator will:
+              <p className="text-xl text-muted-foreground leading-relaxed mb-6">
+                The 5-Day Sprint is <span className="font-semibold text-foreground">Phase 1</span>. This is <span className="font-semibold text-foreground">Phase 2</span>.
+              </p>
+
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                We invite top students to join this exclusive 6-month program, where they will build a <span className="font-semibold text-foreground">world-class Capstone Project</span>—the "Spike" that makes their university application stand out.
               </p>
             </div>
 
+            {/* Right Side - Image */}
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-xl border-2 border-primary/20 overflow-hidden">
+                <img
+                  src="/mentorship.png"
+                  alt="Student presenting project to industry mentors"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-3xl" />
+              <div className="absolute -top-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
+            </div>
+          </div>
+
+          {/* Features Section */}
+          <div>
+            <h3 className="text-3xl font-bold text-center text-foreground mb-8">
+              What Students Will Achieve in the Accelerator:
+            </h3>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <CheckCircle className="w-6 h-6 text-primary mt-1" />
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Code className="w-6 h-6 text-primary" />
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-foreground mb-2">
+                      Build a Real-World Project
+                    </h4>
+                    <p className="text-base text-muted-foreground leading-relaxed">
+                      Go from a sprint idea to a working app, a published research paper, or a launched non-profit.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-lg font-bold text-foreground mb-2">
-                    Build a "Spike"
-                  </h4>
-                  <p className="text-sm text-muted-foreground">
-                    This is the "passion project" that top US/UK universities (like the Ivy League and Oxbridge) are desperately looking for. It's the ultimate tie-breaker.
-                  </p>
-                </div>
-              </div>
+              </Card>
 
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <CheckCircle className="w-6 h-6 text-primary mt-1" />
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Users className="w-6 h-6 text-primary" />
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-foreground mb-2">
+                      Receive Sustained Mentorship
+                    </h4>
+                    <p className="text-base text-muted-foreground leading-relaxed">
+                      Get 6 months of direct access to our PhDs and industry leaders—guidance you can't get anywhere else.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-lg font-bold text-foreground mb-2">
-                    Go from Idea to Reality
-                  </h4>
-                  <p className="text-sm text-muted-foreground">
-                    They will build a working app, launch a non-profit initiative, publish a research paper, or design a viable business plan.
-                  </p>
-                </div>
-              </div>
+              </Card>
 
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <CheckCircle className="w-6 h-6 text-primary mt-1" />
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Presentation className="w-6 h-6 text-primary" />
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-foreground mb-2">
+                      Present at "Demo Day"
+                    </h4>
+                    <p className="text-base text-muted-foreground leading-relaxed">
+                      Pitch your final, completed project to a real-world panel of investors, academics, and industry experts.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-lg font-bold text-foreground mb-2">
-                    Receive Sustained Mentorship
-                  </h4>
-                  <p className="text-sm text-muted-foreground">
-                    They get 6 months of sustained access to the elite mentors that other students only get to hear from once.
-                  </p>
-                </div>
-              </div>
+              </Card>
 
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <CheckCircle className="w-6 h-6 text-primary mt-1" />
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Award className="w-6 h-6 text-primary" />
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-foreground mb-2">
+                      Merit-Based Scholarships
+                    </h4>
+                    <p className="text-base text-muted-foreground leading-relaxed">
+                      Our program is built on talent. We reserve scholarship spots in every cohort for the highest-potential students, regardless of background.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-lg font-bold text-foreground mb-2">
-                    Present at "Demo Day"
-                  </h4>
-                  <p className="text-sm text-muted-foreground">
-                    The program culminates in a Demo Day where students pitch their finished projects to a panel of industry leaders, founders, and academics.
-                  </p>
-                </div>
-              </div>
+              </Card>
             </div>
-          </Card>
-
-          <Card className="p-8 bg-background/50 backdrop-blur-sm border-2 border-primary/20">
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Award className="w-6 h-6 text-primary" />
-                </div>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-foreground mb-3">
-                  Building the Next Generation of Leaders, Together.
-                </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  To ensure this opportunity is available to all top talent, we reserve <span className="font-semibold text-foreground">merit-based scholarship spots</span> in every Accelerator cohort for the highest-potential students, regardless of their financial background.
-                </p>
-              </div>
-            </div>
-          </Card>
+          </div>
         </div>
       </div>
     </section>

@@ -1,9 +1,13 @@
 import { Card } from "@/components/ui/card";
+import { useState } from "react";
+import { ChevronRight } from "lucide-react";
 
 export default function ProgramTimeline() {
+  const [activeDay, setActiveDay] = useState(0);
+
   const buildColors = {
     B: "#4A90E2", // Deep Blue (Foundation, Stability)
-    U: "#32F1B8", // Brand Teal (Connection, Your Brand)
+    U: "#FF6F61", // Coral Red (Connection, Your Brand) - matches "a" in ChromaMind logo
     I: "#7ED321", // Vibrant Green (Growth, Investigation)
     L: "#F8E71C", // Bright Yellow (Knowledge, "Lightbulb")
     D: "#F5A623", // Action Orange (Action, Results, Energy)
@@ -76,162 +80,115 @@ export default function ProgramTimeline() {
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center text-foreground mb-4">
           Your 5-Day Journey
         </h2>
         <p className="text-xl text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-          Each day builds on the last, following our proven B.U.I.L.D. framework to develop real-world leadership skills.
+          Each day builds on the last, following our proprietary B.U.I.L.D. framework.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {timeline.slice(0, 3).map((day, index) => (
-            <Card
+        {/* Tab Navigation */}
+        <div className="flex flex-wrap justify-center gap-2 mb-8">
+          {timeline.map((day, index) => (
+            <button
               key={index}
-              className="p-6"
-              data-testid={`timeline-item-${index}`}
+              onClick={() => setActiveDay(index)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all flex items-center gap-2 ${
+                activeDay === index
+                  ? "text-white shadow-lg"
+                  : "bg-muted/50 text-muted-foreground hover:bg-muted"
+              }`}
+              style={{
+                backgroundColor: activeDay === index ? buildColors[day.buildLetter as keyof typeof buildColors] : undefined,
+              }}
             >
-              <div className="flex items-start gap-3 mb-4">
-                <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="text-primary font-bold">
-                      {index + 1}
-                    </span>
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <div className="text-sm text-muted-foreground mb-1">
-                    {day.day}
-                  </div>
-                  <h4
-                    className="text-lg font-bold text-foreground"
-                    data-testid={`text-day-title-${index}`}
-                  >
-                    <span className="text-2xl" style={{ color: buildColors[day.buildLetter as keyof typeof buildColors] }}>
-                      {day.title[0]}
-                    </span>
-                    {day.title.slice(1)}
-                  </h4>
-                  <p className="text-sm text-primary/80 font-medium">
-                    "{day.subtitle}"
-                  </p>
-                </div>
-              </div>
-              <div className="space-y-3">
-                <div>
-                  <div className="text-xs font-semibold text-foreground mb-1.5">
-                    Morning
-                  </div>
-                  <ul className="space-y-1">
-                    {day.morning.map((activity, actIndex) => (
-                      <li
-                        key={actIndex}
-                        className="text-sm text-muted-foreground flex items-start"
-                      >
-                        <span className="text-primary mr-2 mt-0.5">
-                          •
-                        </span>
-                        <span>{activity}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <div className="text-xs font-semibold text-foreground mb-1.5">
-                    Afternoon
-                  </div>
-                  <ul className="space-y-1">
-                    {day.afternoon.map((activity, actIndex) => (
-                      <li
-                        key={actIndex}
-                        className="text-sm text-muted-foreground flex items-start"
-                      >
-                        <span className="text-primary mr-2 mt-0.5">
-                          •
-                        </span>
-                        <span>{activity}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </Card>
+              <span>Day {index + 1}: {day.title}</span>
+              {index < timeline.length - 1 && activeDay === index && (
+                <ChevronRight className="w-4 h-4" />
+              )}
+            </button>
           ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 md:max-w-3xl md:mx-auto">
-          {timeline.slice(3).map((day, index) => (
-            <Card
-              key={index + 3}
-              className="p-6"
-              data-testid={`timeline-item-${index + 3}`}
-            >
-              <div className="flex items-start gap-3 mb-4">
-                <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="text-primary font-bold">
-                      {index + 4}
-                    </span>
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <div className="text-sm text-muted-foreground mb-1">
-                    {day.day}
-                  </div>
-                  <h4
-                    className="text-lg font-bold text-foreground"
-                    data-testid={`text-day-title-${index + 3}`}
+
+        {/* Active Day Content */}
+        <Card className="p-8 border-2" style={{ borderColor: `${buildColors[timeline[activeDay].buildLetter as keyof typeof buildColors]}40` }}>
+          <div className="mb-6">
+            <div className="flex items-center gap-3 mb-2">
+              <div
+                className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl"
+                style={{ backgroundColor: buildColors[timeline[activeDay].buildLetter as keyof typeof buildColors] }}
+              >
+                {activeDay + 1}
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-foreground">
+                  <span style={{ color: buildColors[timeline[activeDay].buildLetter as keyof typeof buildColors] }}>
+                    {timeline[activeDay].title[0]}
+                  </span>
+                  {timeline[activeDay].title.slice(1)}
+                </h3>
+                <p className="text-lg text-muted-foreground font-medium">
+                  "{timeline[activeDay].subtitle}"
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
+                <span
+                  className="w-2 h-2 rounded-full"
+                  style={{ backgroundColor: buildColors[timeline[activeDay].buildLetter as keyof typeof buildColors] }}
+                />
+                Morning
+              </h4>
+              <ul className="space-y-3">
+                {timeline[activeDay].morning.map((activity, actIndex) => (
+                  <li
+                    key={actIndex}
+                    className="text-base text-muted-foreground flex items-start gap-3"
                   >
-                    <span className="text-2xl" style={{ color: buildColors[day.buildLetter as keyof typeof buildColors] }}>
-                      {day.title[0]}
+                    <span
+                      className="text-lg mt-0.5"
+                      style={{ color: buildColors[timeline[activeDay].buildLetter as keyof typeof buildColors] }}
+                    >
+                      •
                     </span>
-                    {day.title.slice(1)}
-                  </h4>
-                  <p className="text-sm text-primary/80 font-medium">
-                    "{day.subtitle}"
-                  </p>
-                </div>
-              </div>
-              <div className="space-y-3">
-                <div>
-                  <div className="text-xs font-semibold text-foreground mb-1.5">
-                    Morning
-                  </div>
-                  <ul className="space-y-1">
-                    {day.morning.map((activity, actIndex) => (
-                      <li
-                        key={actIndex}
-                        className="text-sm text-muted-foreground flex items-start"
-                      >
-                        <span className="text-primary mr-2 mt-0.5">
-                          •
-                        </span>
-                        <span>{activity}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <div className="text-xs font-semibold text-foreground mb-1.5">
-                    Afternoon
-                  </div>
-                  <ul className="space-y-1">
-                    {day.afternoon.map((activity, actIndex) => (
-                      <li
-                        key={actIndex}
-                        className="text-sm text-muted-foreground flex items-start"
-                      >
-                        <span className="text-primary mr-2 mt-0.5">
-                          •
-                        </span>
-                        <span>{activity}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
+                    <span>{activity}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
+                <span
+                  className="w-2 h-2 rounded-full"
+                  style={{ backgroundColor: buildColors[timeline[activeDay].buildLetter as keyof typeof buildColors] }}
+                />
+                Afternoon
+              </h4>
+              <ul className="space-y-3">
+                {timeline[activeDay].afternoon.map((activity, actIndex) => (
+                  <li
+                    key={actIndex}
+                    className="text-base text-muted-foreground flex items-start gap-3"
+                  >
+                    <span
+                      className="text-lg mt-0.5"
+                      style={{ color: buildColors[timeline[activeDay].buildLetter as keyof typeof buildColors] }}
+                    >
+                      •
+                    </span>
+                    <span>{activity}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Card>
       </div>
     </section>
   );
