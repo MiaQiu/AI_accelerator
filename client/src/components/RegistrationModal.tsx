@@ -21,19 +21,19 @@ import { useToast } from "@/hooks/use-toast";
 interface RegistrationModalProps {
   isOpen: boolean;
   onClose: () => void;
-  selectedWebinar: string;
 }
 
-export default function RegistrationModal({ isOpen, onClose, selectedWebinar }: RegistrationModalProps) {
+export default function RegistrationModal({ isOpen, onClose }: RegistrationModalProps) {
   const [parentName, setParentName] = useState("");
   const [email, setEmail] = useState("");
   const [schoolLevel, setSchoolLevel] = useState("");
+  const [webinarDate, setWebinarDate] = useState("");
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Registration submitted:', { parentName, email, schoolLevel, selectedWebinar });
-    
+    console.log('Registration submitted:', { parentName, email, schoolLevel, webinarDate });
+
     toast({
       title: "Registration Successful!",
       description: "We'll send you the webinar details via email shortly.",
@@ -42,10 +42,9 @@ export default function RegistrationModal({ isOpen, onClose, selectedWebinar }: 
     setParentName("");
     setEmail("");
     setSchoolLevel("");
+    setWebinarDate("");
     onClose();
   };
-
-  const webinarDate = selectedWebinar === 'sunday' ? 'Sunday, November 9th' : 'Wednesday, November 12th';
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -53,7 +52,7 @@ export default function RegistrationModal({ isOpen, onClose, selectedWebinar }: 
         <DialogHeader>
           <DialogTitle data-testid="text-modal-title">Register for Free Webinar</DialogTitle>
           <DialogDescription data-testid="text-modal-description">
-            {webinarDate} at 8:30 PM (SGT)
+            Join our free masterclass to meet the PhD mentors and secure your child's priority spot.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -89,6 +88,18 @@ export default function RegistrationModal({ isOpen, onClose, selectedWebinar }: 
                 <SelectItem value="sec4">Secondary 4</SelectItem>
                 <SelectItem value="jc1">JC 1</SelectItem>
                 <SelectItem value="jc2">JC 2</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <div>
+            <Label htmlFor="webinarDate">Preferred Webinar Date</Label>
+            <Select value={webinarDate} onValueChange={setWebinarDate} required>
+              <SelectTrigger data-testid="select-webinar-date">
+                <SelectValue placeholder="Select date" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="sunday">Sunday, November 9th - 8:30 PM (SGT)</SelectItem>
+                <SelectItem value="wednesday">Wednesday, November 12th - 8:30 PM (SGT)</SelectItem>
               </SelectContent>
             </Select>
           </div>

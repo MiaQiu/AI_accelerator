@@ -49,14 +49,14 @@ export default function HeroSection() {
                 </Button>
               </Link>
 
-              <Button
+              {/* <Button
                 size="lg"
                 variant="outline"
                 onClick={scrollToWebinar}
                 data-testid="button-hero-register"
               >
                 Register for Webinar
-              </Button>
+              </Button> */}
             </div>
           </div>
 
